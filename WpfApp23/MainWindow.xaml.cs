@@ -21,14 +21,13 @@ namespace WpfApp23
         public MainWindow()
         {
             InitializeComponent();
+
+            this.DataContext = person;
         }
 
         private void Save_Click(object sender, RoutedEventArgs e)
         {
-            this.DataContext = person;
-
-            if(person.IsValid == true)
-                MessageBox.Show($"Студент сохранён: \n  {person.Name}\n  {person.Group}\n  {person.Age} лет\n  {person.Course} курс");
+            MessageBox.Show($"Студент сохранён: \n  {person.Name}\n  {person.Group}\n  {person.Age} лет\n  {person.Course} курс");
         }
     }
 }

@@ -16,7 +16,6 @@ namespace WpfApp23
         public bool IsAgreed { get; set; }
 
         public string Error => null;
-        public bool IsValid { get; set; }
 
         public string this[string columnName]
         {
@@ -50,7 +49,6 @@ namespace WpfApp23
                 if (columnName == nameof(IsAgreed) && !IsAgreed)
                     return "Вы должны принять условия соглашения!";
 
-                else IsValid = true;
                 return null;
             }
         }
